@@ -9,7 +9,7 @@
     recurse: true
   });
 
-  gulp.task('github', ['karma']);
+  gulp.task('github', ['eslint', 'karma']);
 
   gulp.task('default', [
     'concat',
