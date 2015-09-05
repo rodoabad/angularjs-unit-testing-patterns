@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "eol-last": 2,
+    "indent": [
+      2,
+      2
+    ],
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "no-alert": 2,
+    "no-cond-assign": [
+      2,
+      "always"
+    ],
+    "no-console": 2,
+    "no-constant-condition": 2,
+    "no-debugger": 2,
+    "no-extra-semi": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multi-spaces": 2,
+    "no-unexpected-multiline": 2,
+    "no-unused-vars": 1,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "wrap-iife": [
+      2,
+      "inside"
+    ]
+  }
+}

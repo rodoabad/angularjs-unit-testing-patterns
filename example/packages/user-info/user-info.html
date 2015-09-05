@@ -1,0 +1,11 @@
+<form>
+  <input class="first-name" type="text" placeholder="First name" ng-model="vm.user.firstName"/>
+  <input class="last-name" type="text" placeholder="Last name" ng-model="vm.user.lastName"/>
+  <input class="email" type="email" placeholder="E-mail" ng-model="vm.user.email"/>
+</form>
+
+<p ng-show="vm.user.firstName" class="greetings">
+  Hello there, {{vm.user.firstName}}! How are you?
+</p>
+
+<pre class="json">{{vm.user | json}}</pre>

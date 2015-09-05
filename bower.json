@@ -1,0 +1,25 @@
+{
+  "name": "angular-unit-testing-patterns",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rodoabad/angularjs-unit-testing-patterns",
+  "authors": [
+    "Rodo Abad <rodoabad@gmail.com> (https://github.com/rodoabad)"
+  ],
+  "description": "Opinionated AngularJS unit testing patterns",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-ui-router": "~0.2.15"
+  }
+}
