@@ -7,6 +7,7 @@
   },
   "extends": "eslint:recommended",
   "rules": {
+    "block-scoped-var": 2,
     "brace-style": [
       2,
       "1tbs",
@@ -14,11 +15,26 @@
         "allowSingleLine": true
       }
     ],
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
     "comma-dangle": [
       2,
       "never"
     ],
+    "complexity": [
+      2,
+      2
+    ],
+    "consistent-return": [
+      2
+    ],
+    "curly": 2,
     "eol-last": 2,
+    "eqeqeq": 2,
     "indent": [
       2,
       2
@@ -48,6 +64,7 @@
       2,
       "always"
     ],
+    "use-isnan": 2,
     "wrap-iife": [
       2,
       "inside"
