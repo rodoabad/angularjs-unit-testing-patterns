@@ -6,9 +6,6 @@
 
   function UserInfoCtrl() {
 
-    var vm = this;
-
-    vm.hello = 'Hello there.';
   }
 
   angular.module('app')
