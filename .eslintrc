@@ -54,6 +54,12 @@
     "no-extra-semi": 2,
     "no-mixed-spaces-and-tabs": 2,
     "no-multi-spaces": 2,
+    "no-trailing-spaces": [
+      2,
+      {
+        "skipBlankLines": false
+      }
+    ],
     "no-unexpected-multiline": 2,
     "no-unused-vars": 1,
     "quotes": [
