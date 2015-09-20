@@ -34,6 +34,9 @@
       coverageReporter: {
         reporters: [
           {
+            type: 'text-summary'
+          },
+          {
             type: 'html',
             dir: 'reports/coverage'
           }
