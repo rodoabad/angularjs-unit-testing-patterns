@@ -20,6 +20,7 @@
       ],
       preprocessors: {
         '**/example/packages/**/!(*.spec).js': 'coverage',
+        '**/example/packages/**/*.js': 'babel',
         '**/*.html': 'ng-html2js'
       },
       exclude: [],
@@ -31,12 +32,27 @@
       browsers: ['PhantomJS'],
       singleRun: true,
       coverageReporter: {
-        type: 'html',
-        dir: 'reports/coverage'
+        reporters: [
+          {
+            type: 'html',
+            dir: 'reports/coverage'
+          }
+        ]
       },
       ngHtml2JsPreprocessor: {
         stripPrefix: 'example/',
         moduleName: 'karma.templates'
+      },
+      babelPreprocessor: {
+        options: {
+          sourceMap: false
+        },
+        filename: function (file) {
+          return file.originalPath.replace(/\.js$/, '.es5.js');
+        },
+        sourceFileName: function (file) {
+          return file.originalPath;
+        }
       }
     });
   };

@@ -1,4 +1,4 @@
-(function () {
+(() => {
 
   'use strict';
 
@@ -8,20 +8,20 @@
     module = window.module,
     sinon = window.sinon;
 
-  describe('UserInfo', function () {
+  describe('UserInfo', () => {
 
     var $compile,
       $scope,
       userInfoEl,
       sandbox;
 
-    beforeEach(function () {
+    beforeEach(() => {
 
       module('app', 'karma.templates');
 
       sandbox = sinon.sandbox.create();
 
-      inject(function (_$compile_, _$rootScope_) {
+      inject((_$compile_, _$rootScope_) => {
 
         $compile = _$compile_;
 
@@ -36,13 +36,13 @@
 
     });
 
-    afterEach(function () {
+    afterEach(() => {
 
       sandbox.restore();
 
     });
 
-    it('should greet the user when they enter their first name', function () {
+    it('should greet the user when they enter their first name', () => {
 
       var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         greetingsEl = angular.element(userInfoEl[0].querySelector('.greetings'));
@@ -56,7 +56,7 @@
 
     });
 
-    it('should display the json data when a user enters their information', function () {
+    it('should display the json data when a user enters their information', () => {
 
       var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         jsonEl = angular.element(userInfoEl[0].querySelector('.json')),

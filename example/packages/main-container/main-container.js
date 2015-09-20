@@ -1,8 +1,8 @@
-(function () {
+(() => {
 
   'use strict';
 
-  var angular = window.angular;
+  const angular = window.angular;
 
   function mainContainer() {
 

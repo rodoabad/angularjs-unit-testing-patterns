@@ -9,7 +9,7 @@ The best way to test this inputs in directives is to test if they are actually h
 We pretty much have two scenarios here - the first one is the directive displays a greeting whenever the user types in their first name.
 
 ```javascript
-    it('should greet the user when they enter their first name', function () {
+    it('should greet the user when they enter their first name', () => {
 
       var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         greetingsEl = angular.element(userInfoEl[0].querySelector('.greetings'));
@@ -29,7 +29,7 @@ The second scenario is when the directive displays the formatted JSON for the `u
 Notice how I have two separate expects in one test? That's because testing one input is not enough. We have to make sure that even if the `user` object has already some attributes that it will just append new attributes. Hence, our second expect will expect both the first and last name together.
 
 ```javascript
-    it('should display the json data when a user enters their information', function () {
+    it('should display the json data when a user enters their information', () => {
 
       var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         jsonEl = angular.element(userInfoEl[0].querySelector('.json')),

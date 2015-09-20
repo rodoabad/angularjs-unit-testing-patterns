@@ -247,7 +247,7 @@
               <tbody>
                 <tr>
                   <td>Errors</td>
-                  <td>0</td>
+                  <td>1</td>
                 </tr>
                 <tr>
                   <td>Warnings</td>
@@ -257,7 +257,7 @@
               <tfoot>
                 <tr>
                   <td>Total alerts</td>
-                  <td>0</td>
+                  <td>1</td>
                 </tr>
               </tfoot>
           </table>
@@ -267,7 +267,7 @@
               <tbody>
                 <tr>
                   <td>Files with errors</td>
-                  <td>0</td>
+                  <td>1</td>
                 </tr>
                 <tr>
                   <td>Files with only warnings</td>
@@ -275,7 +275,7 @@
                 </tr>
                 <tr>
                   <td>Clean files</td>
-                  <td>11</td>
+                  <td>10</td>
                 </tr>
               </tbody>
               <tfoot>
@@ -288,6 +288,27 @@
         </div>
       </div>
 
+        <h2>Most-Common Errors and Warnings</h2>
+        
+        <div class="table-wrapper occurances">
+          <div class="table-column">
+            <h3>Errors</h3>
+        
+              <table class="summary-table">
+                <tbody>
+                    <tr class="occurance row-0">
+                        <td><a href="http://eslint.org/docs/rules/linebreak-style">linebreak-style</a></td>
+                      <td>1</td>
+                    </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="table-column">
+            <h3>Warnings</h3>
+        
+              <p>No warnings were found!</p>
+          </div>
+        </div>
 
       <h2>File Breakdown
           <a id="toggle" href="javascript:;" onclick="toggleAllDetails(this)" class="toggle-all-link">(expand all)</a></h2>
@@ -300,7 +321,21 @@
             <th class="warning-col">Warnings</th>
           </tr>
         </thead>
-        <tbody><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\config\gulp\concat.js</td>
+        <tbody><tr class="danger"><td>            <a class="toggle-link" href="javascript:;" onclick="toggleDetails(this)">d:\Web\GitHub\angularjs-unit-testing-patterns\example\packages\user-info\user-info.js</a></td>
+              <td>1</td>
+              <td>0</td></tr><tr class="details-row hidden">
+                <td colspan="3">
+                  <table class="details-table">
+                    <tbody><tr class="msg-danger"><td class="location-col">
+                              1:15
+                          </td>
+                          <td class="severity-col">Error</td>
+                          <td class="message-col">Expected linebreaks to be &#x27;LF&#x27; but found &#x27;CRLF&#x27;.</td>
+                            <td class="rule-col"><a href="http://eslint.org/docs/rules/linebreak-style">linebreak-style</a></td>
+      </tr></tbody>
+                  </table>
+                </td>
+              </tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\config\gulp\concat.js</td>
               <td>0</td>
               <td>0</td></tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\config\gulp\connect.js</td>
               <td>0</td>
@@ -317,8 +352,6 @@
               <td>0</td></tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\example\packages\main-container\main-container.spec.js</td>
               <td>0</td>
               <td>0</td></tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\example\packages\user-info\user-info-ctrl.js</td>
-              <td>0</td>
-              <td>0</td></tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\example\packages\user-info\user-info.js</td>
               <td>0</td>
               <td>0</td></tr><tr class="success"><td>d:\Web\GitHub\angularjs-unit-testing-patterns\example\packages\user-info\user-info.spec.js</td>
               <td>0</td>

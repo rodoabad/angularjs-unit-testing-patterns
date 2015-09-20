@@ -1,27 +1,27 @@
-(function () {
+(() => {
 
   'use strict';
 
-  var angular = window.angular,
+  const angular = window.angular,
     expect = window.chai.expect,
     inject = window.inject,
     module = window.module,
     sinon = window.sinon;
 
-  describe('MainContainer', function () {
+  describe('MainContainer', () => {
 
-    var $compile,
+    let $compile,
       $scope,
       MainContainerEl,
       sandbox;
 
-    beforeEach(function () {
+    beforeEach(() => {
 
       module('app', 'karma.templates');
 
       sandbox = sinon.sandbox.create();
 
-      inject(function (_$compile_, _$rootScope_) {
+      inject((_$compile_, _$rootScope_) => {
 
         $compile = _$compile_;
 
@@ -36,15 +36,15 @@
 
     });
 
-    afterEach(function () {
+    afterEach(() => {
 
       sandbox.restore();
 
     });
 
-    it('should contain the user info directive', function () {
+    it('should contain the user info directive', () => {
 
-      var userInfoEl = angular.element(MainContainerEl[0].querySelector('user-info'));
+      let userInfoEl = angular.element(MainContainerEl[0].querySelector('user-info'));
 
       expect(userInfoEl.length).to.be.equal(1);
 
