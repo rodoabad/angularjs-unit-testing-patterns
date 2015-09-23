@@ -39,16 +39,12 @@
       2,
       2
     ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
     "no-alert": 2,
     "no-cond-assign": [
       2,
       "always"
     ],
-    "no-console": 2,
+    "no-console": 1,
     "no-constant-condition": 2,
     "no-debugger": 2,
     "no-extra-semi": 2,
