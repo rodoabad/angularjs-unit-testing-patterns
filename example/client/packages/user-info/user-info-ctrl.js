@@ -10,6 +10,7 @@
 
   angular.module('app')
     .controller('UserInfoCtrl', [
+      '$http',
       UserInfoCtrl
     ]);
 
