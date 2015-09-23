@@ -3,17 +3,20 @@
   'use strict';
 
   var gulp = require('gulp'),
-    requireDir = require('require-dir');
+    plugins = require('gulp-load-plugins')(),
+    paths = require('./config/paths.js');
 
-  var config = requireDir('config', {
-    recurse: true
-  });
-
-  gulp.task('github', ['eslint', 'karma']);
-
-  gulp.task('default', [
+  var tasks = [
     'concat',
-    'connect'
-  ]);
+    'default',
+    'eslint',
+    'github',
+    'karma',
+    'watch'
+  ];
+
+  tasks.forEach(function (task) {
+    require('./config/gulp/' + task + '.js')(gulp, plugins, paths);
+  });
 
 })();

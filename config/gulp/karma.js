@@ -1,9 +1,8 @@
-(function () {
+module.exports = function (gulp) {
 
   'use strict';
 
-  var gulp = require('gulp'),
-    karma = require('karma'),
+  var karma = require('karma'),
     path = require('path');
 
   gulp.task('karma', function () {
@@ -12,4 +11,4 @@
     });
   });
 
-})();
+};
