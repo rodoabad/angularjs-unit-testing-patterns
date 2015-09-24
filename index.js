@@ -22,13 +22,26 @@ server.register(Inert, function () {
 
   server.route({
     method: 'GET',
-    path: '/api/random',
+    path: '/api/pets',
     handler: function (request, reply) {
-      reply({
-        cats: 1,
-        dogs: 2,
-        cows: 3
-      });
+      reply([
+        {
+          name: 'birds',
+          selected: false
+        },
+        {
+          name: 'cats',
+          selected: false
+        },
+        {
+          name: 'dogs',
+          selected: false
+        },
+        {
+          name: 'reptiles',
+          selected: false
+        }
+      ]);
     }
   });
 

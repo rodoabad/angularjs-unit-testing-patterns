@@ -13,8 +13,8 @@ Hopefully, this guide sheds some light on what you actually need to test and exp
 ## Testing Patterns
  
  * [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/helloWorld)
- * [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/packages/main-container)
- * [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/packages/user-info)
+ * [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/main-container)
+ * [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/user-info)
  
 # License
 
