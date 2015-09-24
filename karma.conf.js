@@ -25,8 +25,7 @@ module.exports = function (config) {
     exclude: [],
     reporters: [
       'mocha',
-      'coverage',
-      'coveralls'
+      'coverage'
     ],
     port: 9876,
     colors: true,
