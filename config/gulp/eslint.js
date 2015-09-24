@@ -6,8 +6,8 @@ module.exports = function (gulp, plugins, paths) {
 
   gulp.task('eslint', function () {
     return gulp.src([
-      paths.js,
-      paths.packages,
+      paths.config,
+      paths.app,
       paths.tests
     ]).pipe(plugins.eslint('.eslintrc'))
       .pipe(plugins.eslint.format(friendlyFormatter))

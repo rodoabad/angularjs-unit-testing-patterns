@@ -13,13 +13,12 @@ module.exports = function (config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'example/client/packages/**/*.js',
-      'example/client/**/*.spec.js',
+      'example/client/src/**/*.js',
       'example/client/**/*.html'
     ],
     preprocessors: {
-      '**/example/client/packages/**/!(*.spec).js': 'coverage',
-      '**/example/client/packages/**/*.js': 'babel',
+      '**/example/client/src/**/!(*.spec).js': 'coverage',
+      '**/example/client/src/**/*.js': 'babel',
       '**/example/client/**/*.html': 'ng-html2js'
     },
     exclude: [],

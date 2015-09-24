@@ -9,9 +9,9 @@ module.exports = (function () {
 
   var DEFAULTS = {
     dist: 'example/client',
-    js: 'config/**/*.js',
-    packages: 'example/client/packages/**/!(*.spec).js',
-    tests: 'example/client/packages/**/*.spec.js'
+    config: 'config/**/*.js',
+    app: 'example/client/src/**/!(*.spec).js',
+    tests: 'example/client/src/**/*.spec.js'
   };
 
   return _.mapValues(DEFAULTS, function (value) {
