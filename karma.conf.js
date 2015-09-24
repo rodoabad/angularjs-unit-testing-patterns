@@ -23,7 +23,11 @@ module.exports = function (config) {
       '**/example/client/**/*.html': 'ng-html2js'
     },
     exclude: [],
-    reporters: ['mocha', 'coverage'],
+    reporters: [
+      'mocha',
+      'coverage',
+      'coveralls'
+    ],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
