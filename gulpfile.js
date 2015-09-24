@@ -7,7 +7,8 @@
     paths = require('./config/paths.js');
 
   var tasks = [
-    'concat',
+    'build-lib',
+    'build-packages',
     'default',
     'eslint',
     'github',

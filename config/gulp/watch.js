@@ -2,8 +2,8 @@ module.exports = function (gulp, plugins, paths) {
 
   'use strict';
 
-  gulp.task('watch', ['concat'], function () {
-    gulp.watch(paths.packages, ['concat']);
+  gulp.task('watch', ['build-packages'], function () {
+    gulp.watch(paths.packages, ['build-packages']);
   });
 
 };

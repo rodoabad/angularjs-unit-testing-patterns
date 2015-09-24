@@ -2,7 +2,7 @@ module.exports = function (gulp, plugins, paths) {
 
   'use strict';
 
-  gulp.task('concat', ['eslint'], function () {
+  gulp.task('build-packages', ['eslint'], function () {
     return gulp.src([
       paths.packages
     ])
