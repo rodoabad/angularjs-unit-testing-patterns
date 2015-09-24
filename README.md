@@ -6,6 +6,10 @@ There is a lot of guides out there explaining how to use [AngularJS](https://git
 
 Hopefully, this guide sheds some light on what you actually need to test and explain why you should be testing it that way. Most of the patterns that you see here are patterns that I myself use on my projects.
 
+## Styleguide Used
+
+ * [AngularJS Styleguide](https://github.com/rodoabad/angularjs-styleguide) by [@rodoabad](https://github.com/rodoabad)
+
 ## Testing Patterns
  
  * [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/packages/main-container)
