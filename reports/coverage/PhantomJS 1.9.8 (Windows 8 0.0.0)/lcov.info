@@ -84,10 +84,10 @@ BRH:0
 end_of_record
 TN:
 SF:d:\Web\GitHub\angularjs-unit-testing-patterns\example\client\src\routes\root.js
-FN:7,routes
+FN:7,root
 FNF:1
 FNH:1
-FNDA:7,routes
+FNDA:7,root
 DA:1,1
 DA:3,1
 DA:5,1
