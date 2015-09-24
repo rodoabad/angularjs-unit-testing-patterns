@@ -10,17 +10,17 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      'example/client/libs/angular/angular.js',
-      'example/client/libs/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'example/client/packages/**/*.js',
-      'example/**/*.spec.js',
-      'example/**/*.html'
+      'example/client/**/*.spec.js',
+      'example/client/**/*.html'
     ],
     preprocessors: {
       '**/example/client/packages/**/!(*.spec).js': 'coverage',
       '**/example/client/packages/**/*.js': 'babel',
-      '**/*.html': 'ng-html2js'
+      '**/example/client/**/*.html': 'ng-html2js'
     },
     exclude: [],
     reporters: ['mocha', 'coverage'],

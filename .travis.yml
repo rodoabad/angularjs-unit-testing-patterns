@@ -1,4 +1,6 @@
 before_install:
+  - rm -rf node_modules
+  - rm -rf bower_components
   - npm install -g npm
   - npm install -g bower
 language: node_js

@@ -14,12 +14,11 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "example/libs/",
     "test",
     "tests"
   ],
-  "dependencies": {
-    "angular": "~1.4.4",
-    "angular-ui-router": "~0.2.15"
+  "devDependencies": {
+    "angular": "~1.4.6",
+    "angular-ui-router": "ui-router#~0.2.15"
   }
 }
