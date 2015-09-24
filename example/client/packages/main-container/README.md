@@ -1,6 +1,6 @@
 # Main Container Directive
 
-This directive is pretty much just a container that houses your other directives. There are no controller and services to test here, just a directive that loads other directives.
+This directive is pretty much just a container that houses your main content. There are no controller and services to test here.
 
 ## How to test
 
@@ -16,16 +16,17 @@ One way of testing this directive is to check if your directive actually compile
     });
 ```
 
-Although this test will pass, it does not really test your directive. Please if the compile fails then you will know it failed in your `beforeEach`.
+Although this test will pass, it does not really test your directive. Plus if the compile fails then you will know it failed in your `beforeEach`.
 
-A better way of testing your directive is to know what your directive does. For our directive, it is a directive that loads other directives. By looking at the html we can see that it is loading the `<user-info>` element which is another directive in our packages. So as far as our app is concerned, `<main-container>` should contain `<user-info>` inside of it. How do we test that? Well, we simply look for the element if it exist inside our directive.
+A better way of testing your directive is to know what your directive does. For our directive, it is a directive that acts as the main container. By looking at the html we can see that it is loading the `<section ui-view="mainContent">` element. So as far as our app is concerned, `<main-container>` should contain `<section ui-view="mainContent">` inside of it. How do we test that? Well, we simply look for the element if it exist inside our directive and if  the attribute for that element has `mainContent`.
 
 ```javascript
-    it('should contain the user info directive', () => {
+    it('should contain a section that has the "mainContent" view', () => {
 
-      let userInfoEl = angular.element(MainContainerEl[0].querySelector('user-info'));
+      let expectedView = 'mainContent',
+        uiViewAttr = MainContainerEl[0].querySelector('section').getAttribute('ui-view');
 
-      expect(userInfoEl.length).to.be.equal(1);
+      expect(uiViewAttr).to.be.equal(expectedView);
 
     });
 ```

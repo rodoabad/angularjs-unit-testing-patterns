@@ -42,11 +42,12 @@
 
     });
 
-    it('should contain the user info directive', () => {
+    it('should contain a section that has the "mainContent" view', () => {
 
-      let userInfoEl = angular.element(MainContainerEl[0].querySelector('user-info'));
+      let expectedView = 'mainContent',
+        uiViewAttr = MainContainerEl[0].querySelector('section').getAttribute('ui-view');
 
-      expect(userInfoEl.length).to.be.equal(1);
+      expect(uiViewAttr).to.be.equal(expectedView);
 
     });
 
