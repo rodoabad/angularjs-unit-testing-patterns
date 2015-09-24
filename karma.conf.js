@@ -40,7 +40,7 @@ module.exports = function (config) {
           type: 'text-summary'
         },
         {
-          type: 'html',
+          type: 'lcov',
           dir: 'reports/coverage'
         }
       ]
