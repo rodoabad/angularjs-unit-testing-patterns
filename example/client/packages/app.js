@@ -4,25 +4,10 @@
 
   const angular = window.angular;
 
-  function initApp($stateProvider, $urlRouterProvider) {
-
-    let root = {
-      name: 'root',
-      url: '/',
-      template: '<main-container></main-container>'
-    };
-
-    let helloWorld = {
-      name: 'helloWorld',
-      url: '/hello',
-      template: '<h1>Hello world!</h1>'
-    };
-
-    $stateProvider
-      .state(root)
-      .state(helloWorld);
+  function init($urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
+
   }
 
   angular
@@ -30,9 +15,16 @@
       'ui.router'
     ])
     .config([
-      '$stateProvider',
       '$urlRouterProvider',
-      initApp
+      init
     ]);
+
+  angular.element(document).ready(() => {
+
+    angular.bootstrap(document, ['app'], {
+      strictDi: true
+    });
+
+  });
 
 })();
