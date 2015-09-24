@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Coverage Status](https://coveralls.io/repos/rodoabad/angularjs-unit-testing-patterns/badge.svg?branch=master&service=github)](https://coveralls.io/github/rodoabad/angularjs-unit-testing-patterns?branch=master)
+[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns)
 
 # Angular Unit Testing Patterns
 
