@@ -7,7 +7,7 @@
     module = window.module,
     sinon = window.sinon;
 
-  describe('Routes', () => {
+  describe('Route: helloWorld', () => {
 
     let $location,
       $scope,
@@ -37,19 +37,6 @@
     afterEach(() => {
 
       sandbox.restore();
-
-    });
-
-    it('should change the state to root', () => {
-
-      let expectedUrl = '/',
-        state = 'root';
-
-      $state.go(state);
-      $scope.$apply();
-
-      expect($state.current.name).to.equal(state);
-      expect($location.url()).to.equal(expectedUrl);
 
     });
 
