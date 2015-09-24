@@ -2,7 +2,7 @@
 
   'use strict';
 
-  var angular = window.angular,
+  const angular = window.angular,
     expect = window.chai.expect,
     inject = window.inject,
     module = window.module,
@@ -10,7 +10,7 @@
 
   describe('UserInfo', () => {
 
-    var $compile,
+    let $compile,
       $scope,
       userInfoEl,
       sandbox;
@@ -21,10 +21,12 @@
 
       sandbox = sinon.sandbox.create();
 
-      inject((_$compile_, _$rootScope_) => {
+      inject((
+        _$compile_,
+        _$rootScope_
+      ) => {
 
         $compile = _$compile_;
-
         $scope = _$rootScope_.$new();
 
       });
