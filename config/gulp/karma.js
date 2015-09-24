@@ -5,7 +5,7 @@ module.exports = function (gulp) {
   var karma = require('karma'),
     path = require('path');
 
-  gulp.task('karma', function () {
+  gulp.task('karma', ['eslint'], function () {
     karma.server.start({
       configFile: path.resolve('./karma.conf.js')
     });
