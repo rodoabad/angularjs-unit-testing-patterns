@@ -9,8 +9,6 @@
     return {
       restrict: 'E',
       templateUrl: 'src/packages/user-info/user-info.html',
-      controller: 'UserInfoCtrl',
-      controllerAs: 'vm',
       bindToController: true
     };
 

@@ -24,24 +24,26 @@ server.register(Inert, function () {
     method: 'GET',
     path: '/api/pets',
     handler: function (request, reply) {
-      reply([
-        {
-          name: 'birds',
-          selected: false
-        },
-        {
-          name: 'cats',
-          selected: false
-        },
-        {
-          name: 'dogs',
-          selected: false
-        },
-        {
-          name: 'reptiles',
-          selected: false
-        }
-      ]);
+      reply({
+        pets: [
+          {
+            name: 'birds',
+            selected: false
+          },
+          {
+            name: 'cats',
+            selected: false
+          },
+          {
+            name: 'dogs',
+            selected: false
+          },
+          {
+            name: 'reptiles',
+            selected: false
+          }
+        ]
+      });
     }
   });
 
