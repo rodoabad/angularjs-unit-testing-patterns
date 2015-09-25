@@ -19,11 +19,7 @@
       resolve: {
         data: [
           'UserInfoSvc',
-          (UserInfoSvc) => {
-            return UserInfoSvc.getPets().then(response => {
-              return response.data;
-            });
-          }
+          (UserInfoSvc) => UserInfoSvc.getPets().then(data => data)
         ]
       }
     };
