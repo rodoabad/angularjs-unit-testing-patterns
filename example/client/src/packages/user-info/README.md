@@ -11,10 +11,10 @@ We pretty much have two scenarios here - the first one is the directive displays
 ```javascript
     it('should greet the user when they enter their first name', () => {
 
-      var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
+      let firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         greetingsEl = angular.element(userInfoEl[0].querySelector('.greetings'));
 
-      var expectedGreetings = 'Hello there, Rodo! How are you?';
+      let expectedGreetings = 'Hello there, Rodo! How are you?';
 
       firstNameEl.val('Rodo');
       firstNameEl.triggerHandler('input');
@@ -31,7 +31,7 @@ Notice how I have two separate expects in one test? That's because testing one i
 ```javascript
     it('should display the json data when a user enters their information', () => {
 
-      var firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
+      let firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
         jsonEl = angular.element(userInfoEl[0].querySelector('.json')),
         lastNameEl = angular.element(userInfoEl[0].querySelector('.last-name'));
 
