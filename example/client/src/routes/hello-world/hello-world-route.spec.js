@@ -42,13 +42,22 @@
 
     it('should change the state to root.helloWorld', () => {
 
-      let expectedUrl = '/hello-world',
-        state = 'root.helloWorld';
+      let expectedState = 'root.helloWorld';
 
-      $state.go(state);
+      $location.url('/hello-world');
       $scope.$apply();
 
-      expect($state.current.name).to.equal(state);
+      expect($state.current.name).to.equal(expectedState);
+
+    });
+
+    it('should change the url to "/hello-world"', () => {
+
+      let expectedUrl = '/hello-world';
+
+      $state.go('root.helloWorld');
+      $scope.$apply();
+
       expect($location.url()).to.equal(expectedUrl);
 
     });
