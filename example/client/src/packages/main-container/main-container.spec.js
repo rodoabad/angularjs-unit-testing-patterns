@@ -8,7 +8,7 @@
     module = window.module,
     sinon = window.sinon;
 
-  describe('MainContainer', () => {
+  describe('Package: MainContainer', () => {
 
     let $compile,
       $scope,
