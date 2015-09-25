@@ -19,7 +19,7 @@ First test would be if you change or go to the specified URL, then the state sho
       let expectedState = 'root.helloWorld';
 
       $location.url('/hello-world');
-      $scope.$apply();
+      $rootScope.$apply();
 
       expect($state.current.name).to.equal(expectedState);
 
@@ -34,7 +34,7 @@ The second test would then test if changing the state will also change the URL.
       let expectedUrl = '/hello-world';
 
       $state.go('root.helloWorld');
-      $scope.$apply();
+      $rootScope.$apply();
 
       expect($location.url()).to.equal(expectedUrl);
 
