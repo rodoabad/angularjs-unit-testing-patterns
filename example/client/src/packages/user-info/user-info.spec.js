@@ -58,24 +58,6 @@
 
     });
 
-    it('should display the json data when a user enters their information', () => {
-
-      let firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
-        jsonEl = angular.element(userInfoEl[0].querySelector('.json')),
-        lastNameEl = angular.element(userInfoEl[0].querySelector('.last-name'));
-
-      firstNameEl.val('Rodo');
-      firstNameEl.triggerHandler('input');
-
-      expect(jsonEl.html().trim()).to.contain('Rodo');
-
-      lastNameEl.val('Abad');
-      lastNameEl.triggerHandler('input');
-
-      expect(jsonEl.html().trim()).to.contain('Rodo').and.to.contain('Abad');
-
-    });
-
   });
 
 })();
