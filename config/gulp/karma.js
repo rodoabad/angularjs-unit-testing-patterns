@@ -2,13 +2,15 @@ module.exports = function (gulp) {
 
   'use strict';
 
-  var karma = require('karma'),
+  var karma = require('karma').Server,
     path = require('path');
 
+  var server = new karma({
+    configFile: path.resolve('./karma.conf.js')
+  });
+
   gulp.task('karma', ['eslint'], function () {
-    karma.server.start({
-      configFile: path.resolve('./karma.conf.js')
-    });
+    server.start();
   });
 
 };

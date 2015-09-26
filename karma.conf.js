@@ -10,8 +10,8 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'node_modules/angular/angular.js',
+      'node_modules/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'example/client/src/**/*.js',
       'example/client/**/*.html'
