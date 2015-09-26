@@ -6,17 +6,11 @@
 
   class UserInfoCtrl {
 
-    constructor(data) {
-
-      this.data = data;
-
-    }
-
   }
 
-  angular.module('app')
+  angular
+    .module('app')
     .controller('UserInfoCtrl', [
-      'data',
       UserInfoCtrl
     ]);
 

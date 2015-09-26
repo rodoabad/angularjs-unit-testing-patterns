@@ -1,6 +1,6 @@
-# User route
+# Pet list route
 
-This route now uses ui-route's `resolve` which is a way to provide our controller with content or data that is custom to the state. For this scenario, we'll be resolving a data object coming from a service (UserInfoSvc).
+This route now uses ui-route's `resolve` which is a way to provide our controller with content or data that is custom to the state. For this scenario, we'll be resolving a data object coming from a service.
 
 ## How to test
 
@@ -23,7 +23,7 @@ So let's first mock our service. We'll just be mocking it since we're not really
 
       beforeEach(() => {
 
-        sandbox.stub(UserInfoSvc, 'getPets').returns(getPets.promise);
+        sandbox.stub(PetListSvc, 'getPets').returns(getPets.promise);
         getPets.resolve(mockData);
 
       });
@@ -42,27 +42,27 @@ Now that we've mocked it properly, let's start adding our two core tests - one f
 
       beforeEach(() => {
 
-        sandbox.stub(UserInfoSvc, 'getPets').returns(getPets.promise);
+        sandbox.stub(PetListSvc, 'getPets').returns(getPets.promise);
         getPets.resolve(mockData);
 
       });
 
-      it('should change the state to root.user', () => {
+      it('should change the state to root.petList', () => {
 
-        let expectedState = 'root.user';
+        let expectedState = 'root.petList';
 
-        $location.url('/user');
+        $location.url('/pet-list');
         $rootScope.$apply();
 
         expect($state.current.name).to.equal(expectedState);
 
       });
 
-      it('should change the url to "/user"', () => {
+      it('should change the url to "/pet-list"', () => {
 
-        let expectedUrl = '/user';
+        let expectedUrl = '/pet-list';
 
-        $state.go('root.user');
+        $state.go('root.petList');
         $rootScope.$apply();
 
         expect($location.url()).to.equal(expectedUrl);
@@ -85,7 +85,7 @@ Now it's time to test the `resolve` promises.
 
         expect(expectedData).to.equal(null);
 
-        $state.transitionTo('root.user');
+        $state.transitionTo('root.petList');
         $rootScope.$apply();
 
         expect(expectedData).to.eql(mockData);
@@ -109,27 +109,27 @@ Here's what our final test looks like.
 
       beforeEach(() => {
 
-        sandbox.stub(UserInfoSvc, 'getPets').returns(getPets.promise);
+        sandbox.stub(PetListSvc, 'getPets').returns(getPets.promise);
         getPets.resolve(mockData);
 
       });
 
-      it('should change the state to root.user', () => {
+      it('should change the state to root.petList', () => {
 
-        let expectedState = 'root.user';
+        let expectedState = 'root.petList';
 
-        $location.url('/user');
+        $location.url('/pet-list');
         $rootScope.$apply();
 
         expect($state.current.name).to.equal(expectedState);
 
       });
 
-      it('should change the url to "/user"', () => {
+      it('should change the url to "/pet-list"', () => {
 
-        let expectedUrl = '/user';
+        let expectedUrl = '/pet-list';
 
-        $state.go('root.user');
+        $state.go('root.petList');
         $rootScope.$apply();
 
         expect($location.url()).to.equal(expectedUrl);
@@ -146,7 +146,7 @@ Here's what our final test looks like.
 
         expect(expectedData).to.equal(null);
 
-        $state.transitionTo('root.user');
+        $state.transitionTo('root.petList');
         $rootScope.$apply();
 
         expect(expectedData).to.eql(mockData);

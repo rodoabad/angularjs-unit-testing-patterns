@@ -1,0 +1,6 @@
+<fieldset>
+  <legend>What is your favorite pet?</legend>
+  <div ng-repeat="pet in vm.data.pets">
+    <input type="checkbox" ng-change="" ng-model="pet.selected">{{pet.name}}<br/>
+  </div>
+</fieldset>

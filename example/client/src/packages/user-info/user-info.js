@@ -14,7 +14,8 @@
 
   }
 
-  angular.module('app')
+  angular
+    .module('app')
     .directive('userInfo', [
       userInfo
     ]);

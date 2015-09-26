@@ -4,7 +4,7 @@
 
   const angular = window.angular;
 
-  class UserInfoSvc {
+  class PetListSvc {
 
     constructor($http) {
       this.$http = $http;
@@ -18,9 +18,9 @@
 
   angular
     .module('app')
-    .service('UserInfoSvc', [
+    .service('PetListSvc', [
       '$http',
-      UserInfoSvc
+      PetListSvc
     ]);
 
 })();

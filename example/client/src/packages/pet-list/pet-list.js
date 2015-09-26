@@ -4,19 +4,20 @@
 
   const angular = window.angular;
 
-  function mainContainer() {
+  function petList() {
 
     return {
       restrict: 'E',
-      templateUrl: 'src/packages/main-container/main-container.html'
+      templateUrl: 'src/packages/pet-list/pet-list.html',
+      bindToController: true
     };
 
   }
 
   angular
     .module('app')
-    .directive('mainContainer', [
-      mainContainer
+    .directive('petList', [
+      petList
     ]);
 
 })();

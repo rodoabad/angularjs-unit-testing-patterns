@@ -15,12 +15,6 @@
           controller: 'UserInfoCtrl',
           controllerAs: 'vm'
         }
-      },
-      resolve: {
-        data: [
-          'UserInfoSvc',
-          (UserInfoSvc) => UserInfoSvc.getPets().then(data => data)
-        ]
       }
     };
 
