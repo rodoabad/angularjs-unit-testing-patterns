@@ -24,13 +24,16 @@ module.exports = function (config) {
     exclude: [],
     reporters: [
       'mocha',
-      'coverage'
+      'coverage',
+      'coveralls'
     ],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['PhantomJS'],
+    browsers: [
+      'PhantomJS'
+    ],
     singleRun: true,
     coverageReporter: {
       reporters: [
