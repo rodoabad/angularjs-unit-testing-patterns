@@ -8,14 +8,23 @@ Hopefully, this guide sheds some light on what you actually need to test and exp
 
 ## Styleguide Used
 
- - [AngularJS Styleguide](https://github.com/rodoabad/angularjs-styleguide) by [@rodoabad](https://github.com/rodoabad)
+  - [AngularJS Styleguide](https://github.com/rodoabad/angularjs-styleguide) by [@rodoabad](https://github.com/rodoabad)
 
 ## Table of Concents
  
- - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/hello-world#how-to-test-routes-and-states)
- - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/pet-list#how-to-test-routes-with-resolves)
- - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
- - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/user-info#how-to-test-text-inputs-in-directives)
+### Directives
+
+  - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
+  - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/user-info#how-to-test-text-inputs-in-directives) 
+
+### Routes
+ 
+  - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/hello-world#how-to-test-routes-and-states)
+  - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/pet-list#how-to-test-routes-with-resolves)
+ 
+### Services
+
+  - [How to test a service that uses $http](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/pet-list#how-to-test-a-service-that-uses-http)
  
 # License
 
