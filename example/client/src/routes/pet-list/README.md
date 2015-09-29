@@ -1,8 +1,4 @@
-# Pet list route
-
-This route now uses ui-route's `resolve` which is a way to provide our controller with content or data that is custom to the state. For this scenario, we'll be resolving a data object coming from a service.
-
-## How to test
+# How to test routes with resolves
 
 There are a couple of things that you need to think about when testing routes with resolve.
 
@@ -12,10 +8,44 @@ There are a couple of things that you need to think about when testing routes wi
 
 With that in mind we should first be testing the current `$state` and the URL `$location`. In some of our tests, we just switched to the state or go the the URL that we want to test and check if either the state and URL is correct. When your route uses `resolve`, you have to resolve the promises first before your state can finish loading.
 
-So let's first mock our service. We'll just be mocking it since we're not really testing the service.
+## Injections
+
+We need to inject the following dependencies:
+
+- `$location` - We'll be checking if the state that we transitioned into has the right URL assigned to it.
+- `$q` - To handle our promises.
+- `$rootScope` - Whenever we change the state or URL, we need to let AngularJS know that there has been a change. We do not have `$scope` available yet, we have to use `$rootScope`.
+- `$state` - We'll be checking if the URL that we transitioned into has the right state assigned to it.
+- `PetListSvc` - The service that we need.
 
 ```javascript
-    describe('Initialization', () => {
+      inject((
+        _$location_,
+        _$q_,
+        _$rootScope_,
+        _$state_,
+        _PetListSvc_
+      ) => {
+
+        $location = _$location_;
+        $rootScope = _$rootScope_;
+        $state = _$state_;
+        PetListSvc = _PetListSvc_;
+        getPets = _$q_.defer();
+
+      });
+```
+
+## Before Each
+
+Since we're now dealing with `resolve` we can `stub` the methods if they are not local.
+ 
+*Why?* We can `stub` them since it is not part of the SUT (script under test). As a reminder if ever you find a method that is not part of the SUT, just stub them and make your life easier.
+
+Let's start by stubbing it in our `beforeEach` function since it has to resolve every time we check the state or URL. Don't forget to add a mock return!
+
+```javascript
+    describe('Transitions', () => {
 
       let mockData = {
         key: 'value'
@@ -31,10 +61,12 @@ So let's first mock our service. We'll just be mocking it since we're not really
     });
 ```
 
+## Specs
+
 Now that we've mocked it properly, let's start adding our two core tests - one for the state, and another for the URL.
 
 ```javascript
-    describe('Initialization', () => {
+    describe('Transitions', () => {
 
       let mockData = {
         key: 'value'
@@ -85,7 +117,7 @@ Now it's time to test the `resolve` promises.
 
         expect(expectedData).to.equal(null);
 
-        $state.transitionTo('root.petList');
+        $state.go('root.petList');
         $rootScope.$apply();
 
         expect(expectedData).to.eql(mockData);
@@ -101,7 +133,7 @@ Now it's time to test the `resolve` promises.
 Here's what our final test looks like.
 
 ```javascript
-    describe('Initialization', () => {
+    describe('Transitions', () => {
 
       let mockData = {
         key: 'value'
@@ -146,7 +178,7 @@ Here's what our final test looks like.
 
         expect(expectedData).to.equal(null);
 
-        $state.transitionTo('root.petList');
+        $state.go('root.petList');
         $rootScope.$apply();
 
         expect(expectedData).to.eql(mockData);

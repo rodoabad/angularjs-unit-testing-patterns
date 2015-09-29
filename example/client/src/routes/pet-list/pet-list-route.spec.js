@@ -46,7 +46,7 @@
 
     });
 
-    describe('Initialization', () => {
+    describe('Transitions', () => {
 
       let mockData = {
         key: 'value'
@@ -91,7 +91,7 @@
 
         expect(expectedData).to.equal(null);
 
-        $state.transitionTo('root.petList');
+        $state.go('root.petList');
         $rootScope.$apply();
 
         expect(expectedData).to.eql(mockData);
