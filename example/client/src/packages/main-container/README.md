@@ -1,8 +1,6 @@
-# Main Container Directive
+# How to test a directive that acts as a container
 
-This directive is pretty much just a container that houses your main content. There are no controller and services to test here.
-
-## How to test
+## Specs
 
 One way of testing this directive is to check if your directive actually compiles. Developers will usually test if the element exist. They grab the directive element and then test if the `length` is `1`.
 
