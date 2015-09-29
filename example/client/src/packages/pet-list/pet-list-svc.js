@@ -11,7 +11,9 @@
     }
 
     getPets() {
-      return this.$http.get('/api/pets').then(response => response.data);
+      return this.$http
+        .get('/api/pets')
+        .then(response => response.data);
     }
 
   }

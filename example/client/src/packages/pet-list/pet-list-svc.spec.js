@@ -13,10 +13,6 @@
       PetListSvc,
       sandbox;
 
-    let mockData = {
-      key: 'value'
-    };
-
     beforeEach(() => {
 
       module('app', 'karma.templates');
@@ -43,15 +39,15 @@
 
     describe('Getters', () => {
 
-      beforeEach(() => {
-
-        $httpBackend.whenGET('/api/pets').respond(200, mockData);
-
-      });
-
-      it('should get a list of pets', () => {
+      it('should get a list of pets if it is successful', () => {
 
         let svcResponse = null;
+
+        let mockData = {
+          key: 'value'
+        };
+
+        $httpBackend.whenGET('/api/pets').respond(200, mockData);
 
         expect(svcResponse).to.eql(null);
 
