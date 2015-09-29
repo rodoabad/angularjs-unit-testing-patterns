@@ -10,7 +10,7 @@
   describe('Route: helloWorld', () => {
 
     let $location,
-      $scope,
+      $rootScope,
       $state,
       sandbox;
 
@@ -27,7 +27,7 @@
       ) => {
 
         $location = _$location_;
-        $scope = _$rootScope_.$new();
+        $rootScope = _$rootScope_;
         $state = _$state_;
 
       });
@@ -45,7 +45,7 @@
       let expectedState = 'root.helloWorld';
 
       $location.url('/hello-world');
-      $scope.$apply();
+      $rootScope.$apply();
 
       expect($state.current.name).to.equal(expectedState);
 
@@ -56,7 +56,7 @@
       let expectedUrl = '/hello-world';
 
       $state.go('root.helloWorld');
-      $scope.$apply();
+      $rootScope.$apply();
 
       expect($location.url()).to.equal(expectedUrl);
 
