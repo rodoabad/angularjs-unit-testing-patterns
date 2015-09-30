@@ -10,6 +10,14 @@ Hopefully, this guide sheds some light on what you actually need to test and exp
 
   - [AngularJS Styleguide](https://github.com/rodoabad/angularjs-styleguide) by [@rodoabad](https://github.com/rodoabad)
 
+## Installation
+
+```bash
+git clone git@github.com:rodoabad/angularjs-unit-testing-patterns.git testing-patterns
+cd testing-patterns
+npm install
+```
+
 ## Table of Concents
  
 ### Directives
