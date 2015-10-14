@@ -13,6 +13,7 @@
     'eslint',
     'github',
     'karma',
+    'plato',
     'watch'
   ];
 

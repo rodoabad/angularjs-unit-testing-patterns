@@ -8,6 +8,7 @@ module.exports = function (gulp, plugins, paths) {
     ])
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.babel([]))
+      .pipe(gulp.dest('output/'))
       .pipe(plugins.concat('app.min.js'))
       .pipe(plugins.uglify())
       .pipe(plugins.sourcemaps.write('.'))
