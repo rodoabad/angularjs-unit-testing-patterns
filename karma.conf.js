@@ -42,7 +42,8 @@ module.exports = function (config) {
         },
         {
           type: 'lcov',
-          dir: 'reports/coverage'
+          dir: 'reports/coverage',
+          subdir: '.'
         }
       ]
     },
