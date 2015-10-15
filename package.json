@@ -23,6 +23,7 @@
     "eslint": "^1.6.0",
     "eslint-friendly-formatter": "^1.2.2",
     "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.8.0",
     "gulp-babel": "^5.2.1",
     "gulp-concat": "^2.6.0",
     "gulp-eslint": "^1.0.0",
