@@ -11,7 +11,7 @@
       url: 'hello-world',
       views: {
         'mainContent@root': {
-          template: '<h1>Hello world!</h1>'
+          template: `<h1>Hello world!</h1>`
         }
       }
     };
