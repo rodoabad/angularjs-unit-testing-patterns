@@ -58,6 +58,23 @@
 
       });
 
+      it('should throw an error if it is not successful', () => {
+
+        const status = 9999;
+
+        const message = `Oops, something went wrong! We got ${status} from the server!`;
+
+        $httpBackend.whenGET('/api/pets').respond(status);
+
+        expect(() => {
+
+          PetListSvc.getPets();
+          $httpBackend.flush();
+
+        }).to.throw(message);
+
+      });
+
     });
 
   });
