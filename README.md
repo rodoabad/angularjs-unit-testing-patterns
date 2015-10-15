@@ -8,7 +8,7 @@ Hopefully, this guide sheds some light on what you actually need to test and exp
 
 ## Styleguide Used
 
-  - [AngularJS Styleguide](https://github.com/rodoabad/angularjs-styleguide) by [@rodoabad](https://github.com/rodoabad)
+  - [AngularJS ES6 Styleguide](https://github.com/rodoabad/angularjs-es6-styleguide) by [@rodoabad](https://github.com/rodoabad)
 
 ## Installation
 
