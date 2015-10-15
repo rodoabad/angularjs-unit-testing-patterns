@@ -64,7 +64,11 @@
 
         const message = `Oops, something went wrong! We got ${status} from the server!`;
 
+        let svcResponse = null;
+
         $httpBackend.whenGET('/api/pets').respond(status);
+
+        expect(svcResponse).to.eql(null);
 
         expect(() => {
 
@@ -72,6 +76,8 @@
           $httpBackend.flush();
 
         }).to.throw(message);
+
+        expect(svcResponse).to.eql(null);
 
       });
 

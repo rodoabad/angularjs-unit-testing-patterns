@@ -23,6 +23,11 @@
         });
     }
 
+    something() {
+
+      throw new Error('rawr');
+    }
+
   }
 
   angular
