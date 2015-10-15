@@ -2,7 +2,7 @@ module.exports = function (gulp, plugins, paths) {
 
   'use strict';
 
-  gulp.task('build-templates', function () {
+  gulp.task('build-template', function () {
     return gulp.src(paths.html)
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.angularTemplatecache({

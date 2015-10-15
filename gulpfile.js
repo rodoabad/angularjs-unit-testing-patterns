@@ -9,7 +9,7 @@
   var tasks = [
     'build-app',
     'build-lib',
-    'build-templates',
+    'build-template',
     'default',
     'eslint',
     'github',

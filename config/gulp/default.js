@@ -5,6 +5,7 @@ module.exports = function (gulp) {
   gulp.task('default', [
     'build-app',
     'build-lib',
+    'build-template',
     'watch'
   ]);
 
