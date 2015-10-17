@@ -13,13 +13,13 @@ module.exports = function (config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'example/client/src/**/*.js',
-      'example/client/**/*.html'
+      'src/client/**/*.js',
+      'src/client/**/*.html'
     ],
     preprocessors: {
-      '**/example/client/src/**/!(*.spec).js': 'coverage',
-      '**/example/client/src/**/*.js': 'babel',
-      '**/example/client/**/*.html': 'ng-html2js'
+      'src/client/**/!(*.spec).js': 'coverage',
+      'src/client/**/*.js': 'babel',
+      'src/client/**/*.html': 'ng-html2js'
     },
     exclude: [],
     reporters: [
@@ -45,7 +45,6 @@ module.exports = function (config) {
       ]
     },
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'example/client/',
       moduleName: 'karma.templates'
     },
     babelPreprocessor: {
