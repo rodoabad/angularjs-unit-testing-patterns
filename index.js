@@ -15,7 +15,7 @@ server.register(Inert, function () {
     path: '/{param*}',
     handler: {
       directory: {
-        path: 'example/client'
+        path: 'example'
       }
     }
   });

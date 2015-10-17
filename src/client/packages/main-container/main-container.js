@@ -8,7 +8,7 @@
 
     return {
       restrict: 'E',
-      templateUrl: 'src/packages/main-container/main-container.html'
+      templateUrl: 'src/client/packages/main-container/main-container.html'
     };
 
   }

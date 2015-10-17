@@ -8,7 +8,7 @@
 
     return {
       restrict: 'E',
-      templateUrl: 'src/packages/user-info/user-info.html',
+      templateUrl: 'src/client/packages/user-info/user-info.html',
       bindToController: true
     };
 

@@ -8,7 +8,7 @@
 
     return {
       restrict: 'E',
-      templateUrl: 'src/packages/pet-list/pet-list.html',
+      templateUrl: 'src/client/packages/pet-list/pet-list.html',
       bindToController: true
     };
 
