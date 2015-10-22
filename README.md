@@ -32,7 +32,7 @@ npm install
  
 ### Services
 
-  - [How to test a service that uses $http](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/pet-list#how-to-test-a-service-that-uses-http)
+  - [How to test a service that uses $http](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/pet-list#how-to-test-a-service-that-uses-http)
  
 # License
 
