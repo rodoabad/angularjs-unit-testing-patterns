@@ -1,30 +1,24 @@
-(() => {
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
-  'use strict';
+import {init} from './app.config.js';
 
-  const angular = window.angular;
+import appRoot from './modules/root/root.module.js';
 
-  function init($urlRouterProvider) {
+angular
+  .module('app', [
+    uiRouter,
+    appRoot
+  ])
+  .config([
+    '$urlRouterProvider',
+    init
+  ]);
 
-    $urlRouterProvider.otherwise('/');
+angular.element(document).ready(() => {
 
-  }
-
-  angular
-    .module('app', [
-      'ui.router'
-    ])
-    .config([
-      '$urlRouterProvider',
-      init
-    ]);
-
-  angular.element(document).ready(() => {
-
-    angular.bootstrap(document, ['app'], {
-      strictDi: true
-    });
-
+  angular.bootstrap(document, ['app'], {
+    strictDi: true
   });
 
-})();
+});
