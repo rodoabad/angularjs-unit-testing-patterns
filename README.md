@@ -22,13 +22,13 @@ npm install
  
 ### Directives
 
-  - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
-  - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/user-info#how-to-test-text-inputs-in-directives) 
+  - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
+  - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/user-info#how-to-test-text-inputs-in-directives) 
 
 ### Routes
  
-  - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/hello-world#how-to-test-routes-and-states)
-  - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/pet-list#how-to-test-routes-with-resolves)
+  - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/routes/hello-world#how-to-test-routes-and-states)
+  - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/routes/pet-list#how-to-test-routes-with-resolves)
  
 ### Services
 
