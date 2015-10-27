@@ -1,4 +1,4 @@
-export function init($urlRouterProvider) {
+export default function ($urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/');
 
