@@ -9,7 +9,7 @@ module.exports = function (gulp) {
     configFile: path.resolve('./karma.conf.js')
   });
 
-  gulp.task('karma', ['eslint'], function () {
+  gulp.task('karma', function () {
     server.start();
   });
 

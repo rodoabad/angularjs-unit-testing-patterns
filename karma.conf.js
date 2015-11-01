@@ -13,8 +13,7 @@ module.exports = function (config) {
       'node_modules/angular/angular.js',
       'node_modules/angular-ui-router/release/angular-ui-router.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'src/client/**/*.js',
-      'src/client/**/*.html'
+      'example/app.js'
     ],
     preprocessors: {
       'src/client/**/!(*.spec).js': 'coverage',
@@ -49,6 +48,7 @@ module.exports = function (config) {
     },
     babelPreprocessor: {
       options: {
+        presets: ['es2015'],
         sourceMap: false
       },
       filename: function (file) {
