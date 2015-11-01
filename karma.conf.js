@@ -49,7 +49,8 @@ module.exports = function (config) {
     },
     babelPreprocessor: {
       options: {
-        sourceMap: false
+        presets: ['es2015'],
+        sourceMap: 'inline'
       },
       filename: function (file) {
         return file.originalPath.replace(/\.js$/, '.es5.js');
