@@ -10,15 +10,20 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-ui-router/release/angular-ui-router.js',
+      //'node_modules/angular/angular.js',
+      //'node_modules/angular-ui-router/release/angular-ui-router.js',
+
+      'example/app.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'example/app.js'
+      'test/*.js'
+
     ],
     preprocessors: {
-      'src/client/**/!(*.spec).js': 'coverage',
-      'src/client/**/*.js': 'babel',
-      'src/client/**/*.html': 'ng-html2js'
+      'example/app.js': [
+        'webpack',
+        'sourcemap'
+      ],
+      'test/*.js': ['babel']
     },
     exclude: [],
     reporters: [

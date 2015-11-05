@@ -1,24 +1,18 @@
-(() => {
+import angular from 'angular';
 
-  'use strict';
+class PetListCtrl {
 
-  const angular = window.angular;
+  constructor(data) {
 
-  class PetListCtrl {
-
-    constructor(data) {
-
-      this.data = data;
-
-    }
+    this.data = data;
 
   }
 
-  angular
-    .module('app')
-    .controller('PetListCtrl', [
-      'data',
-      PetListCtrl
-    ]);
+}
 
-})();
+angular
+  .module('app')
+  .controller('PetListCtrl', [
+    'data',
+    PetListCtrl
+  ]);

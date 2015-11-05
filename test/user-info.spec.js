@@ -1,7 +1,3 @@
-(() => {
-
-  'use strict';
-
   const angular = window.angular,
     expect = window.chai.expect,
     inject = window.inject,
@@ -17,7 +13,7 @@
 
     beforeEach(() => {
 
-      module('app', 'karma.templates');
+      module('app');
 
       sandbox = sinon.sandbox.create();
 
@@ -59,5 +55,3 @@
     });
 
   });
-
-})();

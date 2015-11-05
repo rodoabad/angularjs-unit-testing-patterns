@@ -1,13 +1,9 @@
-(() => {
-
-  'use strict';
-
   const expect = window.chai.expect,
     inject = window.inject,
     module = window.module,
     sinon = window.sinon;
 
-  describe('Route: user', () => {
+  describe('Route: root', () => {
 
     let $location,
       $scope,
@@ -16,7 +12,7 @@
 
     beforeEach(() => {
 
-      module('app', 'karma.templates');
+      module('app');
 
       sandbox = sinon.sandbox.create();
 
@@ -40,28 +36,17 @@
 
     });
 
-    it('should change the state to root.user', () => {
+    it('should change the state to root', () => {
 
-      let expectedState = 'root.user';
+      let expectedUrl = '/',
+        state = 'root';
 
-      $location.url('/user');
+      $state.go(state);
       $scope.$apply();
 
-      expect($state.current.name).to.equal(expectedState);
-
-    });
-
-    it('should change the url to "/user"', () => {
-
-      let expectedUrl = '/user';
-
-      $state.go('root.user');
-      $scope.$apply();
-
+      expect($state.current.name).to.equal(state);
       expect($location.url()).to.equal(expectedUrl);
 
     });
 
   });
-
-})();
