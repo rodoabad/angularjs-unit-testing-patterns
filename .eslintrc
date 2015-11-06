@@ -6,9 +6,6 @@
     "node": true
   },
   "extends": "eslint:recommended",
-  "ecmaFeatures": {
-    "modules": true
-  },
   "rules": {
     "block-scoped-var": 2,
     "brace-style": [
