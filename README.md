@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Coverage Status](https://coveralls.io/repos/rodoabad/angularjs-unit-testing-patterns/badge.svg?branch=master&service=github)](https://coveralls.io/github/rodoabad/angularjs-unit-testing-patterns?branch=master)
 
+[![Join the chat at https://gitter.im/rodoabad/angularjs-unit-testing-patterns](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rodoabad/angularjs-unit-testing-patterns?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # Angular Unit Testing Patterns
 
 There is a lot of guides out there explaining how to use [AngularJS](https://github.com/angular/angular) and [Karma](https://github.com/karma-runner/karma) together. However, there isn't really a lot of guides explaining how you should test your controllers, services, directives, and anything in between.
