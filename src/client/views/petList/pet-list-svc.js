@@ -27,7 +27,7 @@ class PetListSvc {
 }
 
 angular
-  .module('pet.list')
+  .module('app.petList')
   .service('PetListSvc', [
     '$http',
     PetListSvc

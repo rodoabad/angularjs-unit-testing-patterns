@@ -38,7 +38,7 @@ describe('Route: helloWorld', () => {
 
     let expectedState = 'root.helloWorld';
 
-    $location.url('/hello-world');
+    $location.url('/helloWorld');
     $rootScope.$apply();
 
     expect($state.current.name)
@@ -47,9 +47,9 @@ describe('Route: helloWorld', () => {
 
   });
 
-  it('should change the url to "/hello-world"', () => {
+  it('should change the url to "/helloWorld"', () => {
 
-    let expectedUrl = '/hello-world';
+    let expectedUrl = '/helloWorld';
 
     $state.go('root.helloWorld');
     $rootScope.$apply();

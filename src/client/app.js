@@ -3,9 +3,9 @@ import uiRouter from 'angular-ui-router';
 
 import config from './app.config.js';
 
-import appHelloWorld from './modules/hello-world/hello-world.module.js';
-import appPetList from './modules/pet-list/pet-list.module.js';
-import appRoot from './modules/root/root.module.js';
+import appHelloWorld from './views/helloWorld/index.js';
+import appPetList from './views/petList/index.js';
+import appRoot from './views/root/index.js';
 
 angular
   .module('app', [
@@ -14,15 +14,13 @@ angular
     appPetList,
     appRoot
   ])
-  .config([
-    '$urlRouterProvider',
-    config
-  ]);
+  .config(config);
 
-angular.element(document).ready(() => {
+angular.element(document)
+  .ready(() => {
 
-  angular.bootstrap(document, ['app'], {
-    strictDi: true
+    angular.bootstrap(document, ['app'], {
+      strictDi: true
+    });
+
   });
-
-});
