@@ -33,7 +33,7 @@ module.exports = function (config) {
     ],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_ERROR,
+    logLevel: config.LOG_DEBUG,
     autoWatch: false,
     browsers: [
       'PhantomJS'
@@ -47,9 +47,6 @@ module.exports = function (config) {
           subdir: '.'
         }
       ]
-    },
-    ngHtml2JsPreprocessor: {
-      moduleName: 'karma.templates'
     },
     babelPreprocessor: {
       options: {
