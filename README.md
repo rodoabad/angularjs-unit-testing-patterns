@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Coverage Status](https://coveralls.io/repos/rodoabad/angularjs-unit-testing-patterns/badge.svg?branch=master&service=github)](https://coveralls.io/github/rodoabad/angularjs-unit-testing-patterns?branch=master)
 
+[![Join the chat at https://gitter.im/rodoabad/angularjs-unit-testing-patterns](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rodoabad/angularjs-unit-testing-patterns?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # Angular Unit Testing Patterns
 
 There is a lot of guides out there explaining how to use [AngularJS](https://github.com/angular/angular) and [Karma](https://github.com/karma-runner/karma) together. However, there isn't really a lot of guides explaining how you should test your controllers, services, directives, and anything in between.
@@ -22,17 +24,17 @@ npm install
  
 ### Directives
 
-  - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
-  - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/user-info#how-to-test-text-inputs-in-directives) 
+  - [How to test a directive that acts as a container](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/main-container#how-to-test-a-directive-that-acts-as-a-container)
+  - [How to test text inputs in directives](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/user-info#how-to-test-text-inputs-in-directives) 
 
 ### Routes
  
-  - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/hello-world#how-to-test-routes-and-states)
-  - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/routes/pet-list#how-to-test-routes-with-resolves)
+  - [How to test routes and states](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/routes/hello-world#how-to-test-routes-and-states)
+  - [How to test routes with resolves](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/routes/pet-list#how-to-test-routes-with-resolves)
  
 ### Services
 
-  - [How to test a service that uses $http](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/example/client/src/packages/pet-list#how-to-test-a-service-that-uses-http)
+  - [How to test a service that uses $http](https://github.com/rodoabad/angularjs-unit-testing-patterns/tree/master/src/client/packages/pet-list#how-to-test-a-service-that-uses-http)
  
 # License
 
