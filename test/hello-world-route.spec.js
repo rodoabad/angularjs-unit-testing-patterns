@@ -1,7 +1,7 @@
-const expect = window.chai.expect,
-  inject = window.inject,
-  module = window.module,
-  sinon = window.sinon;
+import 'angular';
+import 'angular-mocks';
+
+import '../src/client/app';
 
 describe('Route: helloWorld', () => {
 
@@ -12,7 +12,7 @@ describe('Route: helloWorld', () => {
 
   beforeEach(() => {
 
-    module('app');
+    angular.mock.module('app');
 
     sandbox = sinon.sandbox.create();
 

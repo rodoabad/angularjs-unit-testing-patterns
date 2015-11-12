@@ -8,17 +8,30 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      'example/app.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'test/*.js'
+      'test/**/*.js'
 
     ],
     preprocessors: {
-      'example/app.js': [
+      'test/*.js': [
         'webpack',
         'sourcemap'
-      ],
-      'test/*.js': ['babel']
+      ]
+    },
+    webpack: {
+      devtool: 'inline',
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
+          },
+          {
+            test: /\.html$/,
+            loader: 'html'
+          }
+        ]
+      }
     },
     exclude: [],
     reporters: [

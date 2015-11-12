@@ -1,7 +1,4 @@
-const expect = window.chai.expect,
-  inject = window.inject,
-  module = window.module,
-  sinon = window.sinon;
+import '../src/client/app';
 
 describe('Route: root', () => {
 
@@ -12,7 +9,7 @@ describe('Route: root', () => {
 
   beforeEach(() => {
 
-    module('app');
+    angular.mock.module('app');
 
     sandbox = sinon.sandbox.create();
 

@@ -1,8 +1,4 @@
-const angular = window.angular,
-  expect = window.chai.expect,
-  inject = window.inject,
-  module = window.module,
-  sinon = window.sinon;
+import '../src/client/app';
 
 describe('Package: MainContainer', () => {
 
@@ -13,7 +9,7 @@ describe('Package: MainContainer', () => {
 
   beforeEach(() => {
 
-    module('app');
+    angular.mock.module('app');
 
     sandbox = sinon.sandbox.create();
 

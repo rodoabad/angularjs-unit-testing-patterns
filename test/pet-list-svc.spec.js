@@ -1,7 +1,4 @@
-const expect = window.chai.expect,
-  inject = window.inject,
-  module = window.module,
-  sinon = window.sinon;
+import '../src/client/app';
 
 describe('Service: PetListSvc', () => {
 
@@ -11,7 +8,7 @@ describe('Service: PetListSvc', () => {
 
   beforeEach(() => {
 
-    module('app');
+    angular.mock.module('app');
 
     sandbox = sinon.sandbox.create();
 
