@@ -1,6 +1,4 @@
-import angular from 'angular';
-
-class PetListSvc {
+export default class {
 
   constructor($http) {
     this.$http = $http;
@@ -25,10 +23,3 @@ class PetListSvc {
   }
 
 }
-
-angular
-  .module('app.petList')
-  .service('PetListSvc', [
-    '$http',
-    PetListSvc
-  ]);

@@ -58,7 +58,7 @@ describe('Route: userInfo', () => {
 
       let expectedState = 'root.petList';
 
-      $location.url('/petList');
+      $location.url('/pet-list');
       $rootScope.$apply();
 
       expect($state.current.name)
@@ -67,9 +67,9 @@ describe('Route: userInfo', () => {
 
     });
 
-    it('should change the url to "/petList"', () => {
+    it('should change the url to "/pet-list"', () => {
 
-      let expectedUrl = '/petList';
+      let expectedUrl = '/pet-list';
 
       $state.go('root.petList');
       $rootScope.$apply();

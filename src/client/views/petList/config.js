@@ -7,7 +7,7 @@ export default [
       url: 'pet-list',
       views: {
         'mainContent@root': {
-          template: '<petList></petList>',
+          template: '<pet-list></pet-list>',
           controller: 'PetListCtrl',
           controllerAs: 'vm'
         }

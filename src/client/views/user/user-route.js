@@ -1,32 +1,27 @@
-(() => {
+import angular from 'angular';
 
-  'use strict';
+function user($stateProvider) {
 
-  const angular = window.angular;
-
-  function user($stateProvider) {
-
-    let user = {
-      name: 'root.user',
-      url: 'user',
-      views: {
-        'mainContent@root': {
-          template: '<user-info></user-info>',
-          controller: 'UserInfoCtrl',
-          controllerAs: 'vm'
-        }
+  let user = {
+    name: 'root.user',
+    url: 'user',
+    views: {
+      'mainContent@root': {
+        template: '<user-info></user-info>',
+        controller: 'UserInfoCtrl',
+        controllerAs: 'vm'
       }
-    };
+    }
+  };
 
-    $stateProvider.state(user);
+  $stateProvider.state(user);
 
-  }
+}
 
-  angular
-    .module('app')
-    .config([
-      '$stateProvider',
-      user
-    ]);
-
-})();
+export default angular
+  .module('app')
+  .config([
+    '$stateProvider',
+    user
+  ])
+  .name;

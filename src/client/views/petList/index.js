@@ -1,12 +1,27 @@
 import angular from 'angular';
 
-import config from './config.js';
+import config from './config';
+import controller from './controller';
+import service from './service';
 
-import petList from './list.js';
+import template from './index.html';
+
+const directive = {
+  restrict: 'E',
+  template: template
+};
 
 export default angular
   .module('app.petList', [])
   .config(config)
-  .directive('petList', petList)
+  .controller('PetListCtrl', [
+    'data',
+    controller
+  ])
+  .service('PetListSvc', [
+    '$http',
+    service
+  ])
+  .directive('petList', () => directive)
   .name;
 

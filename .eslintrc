@@ -5,6 +5,9 @@
     "mocha": true,
     "node": true
   },
+  "ecmaFeatures": {
+    "modules": true
+  },
   "extends": "eslint:recommended",
   "rules": {
     "block-scoped-var": 2,
