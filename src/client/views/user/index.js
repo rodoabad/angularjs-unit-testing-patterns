@@ -1,18 +1,21 @@
 import angular from 'angular';
 
 import config from './config';
+import controller from './controller';
 
 import template from './index.html';
 
 function directive() {
   return {
     restrict: 'E',
-    template: template
+    template: template,
+    bindToController: true
   };
 }
 
 export default angular
-  .module('app.root', [])
+  .module('app.User', [])
   .config(config)
-  .directive('mainContainer', directive)
+  .controller('UserInfoCtrl', controller)
+  .directive('userInfo', directive)
   .name;

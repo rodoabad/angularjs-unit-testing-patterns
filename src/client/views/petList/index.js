@@ -6,10 +6,12 @@ import service from './service';
 
 import template from './index.html';
 
-const directive = {
-  restrict: 'E',
-  template: template
-};
+function directive() {
+  return {
+    restrict: 'E',
+    template: template
+  };
+}
 
 export default angular
   .module('app.petList', [])
@@ -22,6 +24,6 @@ export default angular
     '$http',
     service
   ])
-  .directive('petList', () => directive)
+  .directive('petList', directive)
   .name;
 

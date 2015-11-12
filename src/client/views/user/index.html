@@ -1,0 +1,15 @@
+<form>
+
+    <fieldset>
+        <legend>What is your first name, last name, and e-mail address?</legend>
+        <input class="first-name" type="text" placeholder="First name" ng-model="vm.user.firstName"/>
+        <input class="last-name" type="text" placeholder="Last name" ng-model="vm.user.lastName"/>
+        <input class="email" type="email" placeholder="E-mail" ng-model="vm.user.email"/>
+    </fieldset>
+
+</form>
+
+
+<p ng-show="vm.user.firstName" class="greetings">
+    Hello there, {{vm.user.firstName}}! How are you?
+</p>

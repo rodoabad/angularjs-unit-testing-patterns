@@ -1,7 +1,5 @@
 module.exports = function (config) {
 
-  'use strict';
-
   config.set({
     basePath: '',
     frameworks: [
@@ -10,9 +8,6 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      //'node_modules/angular/angular.js',
-      //'node_modules/angular-ui-router/release/angular-ui-router.js',
-
       'example/app.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'test/*.js'
@@ -49,10 +44,6 @@ module.exports = function (config) {
       ]
     },
     babelPreprocessor: {
-      options: {
-        presets: ['es2015'],
-        sourceMap: false
-      },
       filename: function (file) {
         return file.originalPath.replace(/\.js$/, '.es5.js');
       },

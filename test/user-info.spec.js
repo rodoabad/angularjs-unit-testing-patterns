@@ -1,57 +1,58 @@
-  const angular = window.angular,
-    expect = window.chai.expect,
-    inject = window.inject,
-    module = window.module,
-    sinon = window.sinon;
+const angular = window.angular,
+  expect = window.chai.expect,
+  inject = window.inject,
+  module = window.module,
+  sinon = window.sinon;
 
-  describe('Package: UserInfo', () => {
+describe('Package: UserInfo', () => {
 
-    let $compile,
-      $scope,
-      userInfoEl,
-      sandbox;
+  let $compile,
+    $scope,
+    userInfoEl,
+    sandbox;
 
-    beforeEach(() => {
+  beforeEach(() => {
 
-      module('app');
+    module('app');
 
-      sandbox = sinon.sandbox.create();
+    sandbox = sinon.sandbox.create();
 
-      inject((
-        _$compile_,
-        _$rootScope_
-      ) => {
+    inject((_$compile_,
+            _$rootScope_) => {
 
-        $compile = _$compile_;
-        $scope = _$rootScope_.$new();
-
-      });
-
-      userInfoEl = angular.element('<user-info></user-info>');
-
-      $compile(userInfoEl)($scope);
-      $scope.$apply();
+      $compile = _$compile_;
+      $scope = _$rootScope_.$new();
 
     });
 
-    afterEach(() => {
+    userInfoEl = angular.element('<user-info></user-info>');
 
-      sandbox.restore();
-
-    });
-
-    it('should greet the user when they enter their first name', () => {
-
-      let firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
-        greetingsEl = angular.element(userInfoEl[0].querySelector('.greetings'));
-
-      let expectedGreetings = 'Hello there, Rodo! How are you?';
-
-      firstNameEl.val('Rodo');
-      firstNameEl.triggerHandler('input');
-
-      expect(greetingsEl.html().trim()).to.equal(expectedGreetings);
-
-    });
+    $compile(userInfoEl)($scope);
+    $scope.$apply();
 
   });
+
+  afterEach(() => {
+
+    sandbox.restore();
+
+  });
+
+  it('should greet the user when they enter their first name', () => {
+
+    let firstNameEl = angular.element(userInfoEl[0].querySelector('.first-name')),
+      greetingsEl = angular.element(userInfoEl[0].querySelector('.greetings'));
+
+    let expectedGreetings = 'Hello there, Rodo! How are you?';
+
+    firstNameEl.val('Rodo');
+    firstNameEl.triggerHandler('input');
+
+    expect(greetingsEl.html()
+      .trim())
+      .to
+      .equal(expectedGreetings);
+
+  });
+
+});
