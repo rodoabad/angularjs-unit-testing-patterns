@@ -1,7 +1,5 @@
-import 'angular';
-import 'angular-mocks';
-
 import '../src/client/app';
+import 'angular-mocks';
 
 describe('Route: helloWorld', () => {
 

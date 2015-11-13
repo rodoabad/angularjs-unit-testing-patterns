@@ -1,5 +1,6 @@
 export default class {
 
+  /*@ngInject*/
   constructor($http) {
     this.$http = $http;
   }

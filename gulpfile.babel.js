@@ -15,7 +15,8 @@
     'github',
     'karma',
     'plato',
-    'watch'
+    'watch',
+    'webpack'
   ];
 
   tasks.forEach(function (task) {

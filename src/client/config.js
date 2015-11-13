@@ -1,8 +1,6 @@
-export default [
-  '$urlRouterProvider',
-  $urlRouterProvider => {
+/*@ngInject*/
+export default $urlRouterProvider => {
 
-    $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
-  }
-];
+};

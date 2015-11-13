@@ -1,18 +1,16 @@
-export default [
-  '$stateProvider',
-  $stateProvider => {
+/*@ngInject*/
+export default   $stateProvider => {
 
-    const state = {
-      name: 'root',
-      url: '/',
-      views: {
-        'mainContainer@': {
-          template: '<main-container></main-container>'
-        }
+  const state = {
+    name: 'root',
+    url: '/',
+    views: {
+      'mainContainer@': {
+        template: '<main-container></main-container>'
       }
-    };
+    }
+  };
 
-    $stateProvider.state(state);
+  $stateProvider.state(state);
 
-  }
-];
+};

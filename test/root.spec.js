@@ -1,5 +1,3 @@
-import '../src/client/app';
-
 describe('Route: root', () => {
 
   let $location,

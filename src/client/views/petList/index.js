@@ -16,14 +16,8 @@ function directive() {
 export default angular
   .module('app.petList', [])
   .config(config)
-  .controller('PetListCtrl', [
-    'data',
-    controller
-  ])
-  .service('PetListSvc', [
-    '$http',
-    service
-  ])
+  .controller('PetListCtrl', controller)
+  .service('PetListSvc', service)
   .directive('petList', directive)
   .name;
 

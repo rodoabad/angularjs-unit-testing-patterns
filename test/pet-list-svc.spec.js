@@ -1,5 +1,3 @@
-import '../src/client/app';
-
 describe('Service: PetListSvc', () => {
 
   let $httpBackend,

@@ -1,5 +1,3 @@
-import '../src/client/app';
-
 describe('Package: MainContainer', () => {
 
   let $compile,
