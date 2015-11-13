@@ -1,16 +1,11 @@
-module.exports = function (gulp) {
+import gulp from 'gulp';
+import {Server} from 'karma';
+import path from 'path';
 
-  'use strict';
+const server = new Server({
+  configFile: path.resolve('./karma.conf.js')
+});
 
-  var karma = require('karma').Server,
-    path = require('path');
-
-  var server = new karma({
-    configFile: path.resolve('./karma.conf.js')
-  });
-
-  gulp.task('karma', function () {
-    server.start();
-  });
-
-};
+gulp.task('karma', function () {
+  server.start();
+});

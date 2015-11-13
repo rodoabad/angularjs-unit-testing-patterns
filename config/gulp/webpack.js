@@ -1,16 +1,13 @@
-var webpackConfig = require('../../webpack.config.js');
-var webpack = require('webpack');
+import gulp from 'gulp';
+import webpack from 'webpack';
 
-module.exports = function (gulp, plugins, paths) {
+import config from '../../webpack.config.js';
 
-  'use strict';
+gulp.task('webpack', function (callback) {
 
-  gulp.task('webpack', function (callback) {
-
-    webpack(webpackConfig, function (error, stats) {
-      callback();
-    });
-
+  webpack(config, function (error, stats) {
+    callback();
   });
 
-};
+});
+

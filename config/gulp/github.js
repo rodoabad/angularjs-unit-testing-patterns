@@ -1,7 +1,3 @@
-module.exports = function (gulp) {
+import gulp from 'gulp';
 
-  'use strict';
-
-  gulp.task('github', ['karma']);
-
-};
+gulp.task('github', ['karma']);

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Opinionated AngularJS unit testing patterns",
   "scripts": {
-    "test": "gulp github"
+    "test": "gulp github",
+    "build": "webpack",
+    "server": "node src/server/hapi.js"
   },
   "repository": {
     "type": "git",
