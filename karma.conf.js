@@ -8,23 +8,25 @@ module.exports = function (config) {
       'sinon'
     ],
     files: [
-      'test/**/*.js'
-
+      'webpack.karma.js'
     ],
     preprocessors: {
-      'test/*.js': [
-        'webpack',
-        'sourcemap'
+      'webpack.karma.js': [
+        'sourcemap',
+        'webpack'
       ]
     },
     webpack: {
-      devtool: 'inline',
+      devtool: 'inline-source-map',
       module: {
         loaders: [
           {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader'
+            loaders: [
+              'ng-annotate',
+              'babel-loader'
+            ]
           },
           {
             test: /\.html$/,
@@ -36,12 +38,12 @@ module.exports = function (config) {
     exclude: [],
     reporters: [
       'mocha',
-      'coverage',
-      'coveralls'
+      //'coverage',
+      //'coveralls'
     ],
     port: 9876,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_ERROR,
     autoWatch: false,
     browsers: [
       'PhantomJS'
