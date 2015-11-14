@@ -1,6 +1,6 @@
 export default class {
 
-  /*@ngInject*/
+  /* @ngInject */
   constructor(data) {
 
     this.data = data;

@@ -1,5 +1,5 @@
-/*@ngInject*/
-export default  $stateProvider => {
+/* @ngInject */
+export default $stateProvider => {
 
   const state = {
     name: 'root.user',

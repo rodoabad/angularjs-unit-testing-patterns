@@ -1,18 +1,12 @@
-module.exports = function (gulp, plugins, paths) {
+import gulp from 'gulp';
+import eslint from 'gulp-eslint';
+import friendlyFormatter from 'eslint-friendly-formatter';
 
-  'use strict';
+import paths from '../paths';
 
-  var friendlyFormatter = require('eslint-friendly-formatter');
-
-  gulp.task('eslint', function () {
-    return gulp.src([
-      paths.config,
-      paths.app,
-      paths.tests
-    ]).pipe(plugins.eslint('.eslintrc'))
-      .pipe(plugins.eslint.format(friendlyFormatter))
-      .pipe(plugins.eslint.failAfterError());
-  });
-
-};
-
+gulp.task('eslint', () => {
+  gulp.src(paths.app)
+    .pipe(eslint('.eslintrc'))
+    .pipe(eslint.format(friendlyFormatter))
+    .pipe(eslint.failAfterError());
+});

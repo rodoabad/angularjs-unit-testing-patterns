@@ -3,9 +3,9 @@ import webpack from 'webpack';
 
 import config from '../../webpack.config.js';
 
-gulp.task('webpack', function (callback) {
+gulp.task('webpack', ['eslint'], function (callback) {
 
-  webpack(config, function (error, stats) {
+  webpack(config, function () {
     callback();
   });
 

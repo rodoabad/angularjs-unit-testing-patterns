@@ -1,4 +1,4 @@
-/*@ngInject*/
+/* @ngInject */
 export default $stateProvider => {
 
   const state = {

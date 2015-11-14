@@ -1,4 +1,4 @@
-/*@ngInject*/
+/* @ngInject */
 export default $stateProvider => {
 
   const state = {
@@ -12,7 +12,7 @@ export default $stateProvider => {
       }
     },
     resolve: {
-      /*@ngInject*/
+      /* @ngInject */
       data: PetListSvc => PetListSvc.getPets()
         .then(data => data)
     }
