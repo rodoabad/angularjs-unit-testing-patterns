@@ -1,4 +1,4 @@
-describe('Package: UserInfo', () => {
+describe('Index: UserInfo', () => {
 
   let $compile,
     $scope,

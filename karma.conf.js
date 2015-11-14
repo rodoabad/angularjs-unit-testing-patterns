@@ -37,7 +37,7 @@ module.exports = function (config) {
     },
     exclude: [],
     reporters: [
-      'mocha',
+      'dots',
       //'coverage',
       //'coveralls'
     ],
@@ -57,14 +57,6 @@ module.exports = function (config) {
           subdir: '.'
         }
       ]
-    },
-    babelPreprocessor: {
-      filename: function (file) {
-        return file.originalPath.replace(/\.js$/, '.es5.js');
-      },
-      sourceFileName: function (file) {
-        return file.originalPath;
-      }
     }
   });
 

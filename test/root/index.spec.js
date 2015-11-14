@@ -1,4 +1,4 @@
-describe('Package: MainContainer', () => {
+describe('Index: MainContainer', () => {
 
   let $compile,
     $scope,

@@ -1,7 +1,7 @@
-describe('Route: helloWorld', () => {
+describe('Route: root', () => {
 
   let $location,
-    $rootScope,
+    $scope,
     $state,
     sandbox;
 
@@ -16,7 +16,7 @@ describe('Route: helloWorld', () => {
             _$state_) => {
 
       $location = _$location_;
-      $rootScope = _$rootScope_;
+      $scope = _$rootScope_.$new();
       $state = _$state_;
 
     });
@@ -29,26 +29,17 @@ describe('Route: helloWorld', () => {
 
   });
 
-  it('should change the state to root.helloWorld', () => {
+  it('should change the state to root', () => {
 
-    let expectedState = 'root.helloWorld';
+    let expectedUrl = '/',
+      state = 'root';
 
-    $location.url('/helloWorld');
-    $rootScope.$apply();
+    $state.go(state);
+    $scope.$apply();
 
     expect($state.current.name)
       .to
-      .equal(expectedState);
-
-  });
-
-  it('should change the url to "/helloWorld"', () => {
-
-    let expectedUrl = '/helloWorld';
-
-    $state.go('root.helloWorld');
-    $rootScope.$apply();
-
+      .equal(state);
     expect($location.url())
       .to
       .equal(expectedUrl);
