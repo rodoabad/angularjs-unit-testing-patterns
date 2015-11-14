@@ -1,7 +1,7 @@
 {
   "name": "angularjs-unit-testing-patterns",
   "version": "1.0.0",
-  "description": "Opinionated AngularJS unit testing patterns",
+  "description": "Opinionated AngularJS unit testing patterns using ES6, Webpack, Karma, Mocha, and Sinon",
   "scripts": {
     "test": "gulp github",
     "build": "gulp webpack",
