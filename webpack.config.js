@@ -1,8 +1,12 @@
-module.exports = {
+import webpack from 'webpack';
+import path from 'path';
 
+export default {
+
+  devtool: 'eval',
   entry: './src/client/app.js',
   output: {
-    path: './example',
+    path: path.join(__dirname, 'example'),
     filename: 'app.js'
   },
   module: {
@@ -11,8 +15,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
-          'ng-annotate',
-          'babel-loader'
+          'ng-annotate?single_quotes',
+          'babel?cacheDirectory'
         ]
       },
       {
@@ -20,6 +24,10 @@ module.exports = {
         loader: 'html'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin()
+  ]
 
 };
