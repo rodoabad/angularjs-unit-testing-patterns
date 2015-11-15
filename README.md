@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master&style=flat-square)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Dependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns.svg?style=flat-square)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns) [![devDependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns/dev-status.svg?style=flat-square)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns#info=devDependencies)
+[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Dependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns.svg)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns) [![devDependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns/dev-status.svg)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns#info=devDependencies)
 
 # Angular Unit Testing Patterns
 
@@ -6,9 +6,10 @@ There is a lot of guides out there explaining how to use [AngularJS](https://git
 
 Hopefully, this guide sheds some light on what you actually need to test and explain why you should be testing it that way. Most of the patterns that you see here are patterns that I myself use on my projects.
 
-## Styleguide Used
+## Styleguides Used
 
-  - [AngularJS ES6 Styleguide](https://github.com/rodoabad/angularjs-es6-styleguide) by [@rodoabad](https://github.com/rodoabad)
+  - [AngularJS ES6 Styleguide](https://github.com/rodoabad/angularjs-es6-styleguide)
+  - [AngularJS Directory Structure](https://github.com/rodoabad/angularjs-directory-structure)
 
 ## Installation
 
