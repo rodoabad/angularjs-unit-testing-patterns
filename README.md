@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Dependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns.svg)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns) [![devDependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns/dev-status.svg)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns#info=devDependencies)
+[![Build Status](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns.svg?branch=master&style=flat-square)](https://travis-ci.org/rodoabad/angularjs-unit-testing-patterns) [![Dependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns.svg?style=flat-square)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns) [![devDependency Status](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns/dev-status.svg?style=flat-square)](https://david-dm.org/rodoabad/angularjs-unit-testing-patterns#info=devDependencies)
 
 # Angular Unit Testing Patterns
 
