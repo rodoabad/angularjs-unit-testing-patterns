@@ -1,7 +1,7 @@
 import 'angular';
 import 'angular-mocks';
 
-import './src/client/app';
+import './src/client/index';
 
 const context = require.context('./test', true, /\.spec\.js/);
 
