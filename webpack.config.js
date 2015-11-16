@@ -7,7 +7,7 @@ export default {
   entry: './src/client/app.js',
   output: {
     path: path.join(__dirname, 'example'),
-    filename: 'app.js'
+    filename: 'index.js'
   },
   module: {
     loaders: [
