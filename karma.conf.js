@@ -24,8 +24,8 @@ module.exports = function (config) {
             test: /\.js$/,
             exclude: /node_modules/,
             loaders: [
-              'ng-annotate',
-              'babel-loader'
+              'ng-annotate?single_quotes',
+              'babel?cacheDirectory'
             ]
           },
           {

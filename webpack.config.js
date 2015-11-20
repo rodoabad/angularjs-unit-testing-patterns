@@ -4,7 +4,7 @@ import path from 'path';
 export default {
 
   devtool: 'eval',
-  entry: './src/client/app.js',
+  entry: './src/client/index.js',
   output: {
     path: path.join(__dirname, 'example'),
     filename: 'index.js'
