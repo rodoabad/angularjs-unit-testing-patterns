@@ -12,8 +12,8 @@ module.exports = function (config) {
     ],
     preprocessors: {
       'webpack.karma.js': [
-        'sourcemap',
-        'webpack'
+        'webpack',
+        'sourcemap'
       ]
     },
     webpack: {
@@ -25,7 +25,7 @@ module.exports = function (config) {
             exclude: /node_modules/,
             loaders: [
               'ng-annotate?single_quotes',
-              'babel?cacheDirectory'
+              'babel'
             ]
           },
           {
@@ -37,9 +37,7 @@ module.exports = function (config) {
     },
     exclude: [],
     reporters: [
-      'dots',
-      //'coverage',
-      //'coveralls'
+      'dots'
     ],
     port: 9876,
     colors: true,
@@ -48,16 +46,7 @@ module.exports = function (config) {
     browsers: [
       'PhantomJS'
     ],
-    singleRun: true,
-    coverageReporter: {
-      reporters: [
-        {
-          type: 'lcov',
-          dir: 'reports/coverage',
-          subdir: '.'
-        }
-      ]
-    }
+    singleRun: true
   });
 
 };

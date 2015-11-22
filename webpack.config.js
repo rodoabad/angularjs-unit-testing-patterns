@@ -16,7 +16,7 @@ export default {
         exclude: /node_modules/,
         loaders: [
           'ng-annotate?single_quotes',
-          'babel?cacheDirectory'
+          'babel'
         ]
       },
       {
