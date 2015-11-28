@@ -18,7 +18,8 @@ angular
   ])
   .config(config);
 
-angular.element(document)
+angular
+  .element(document)
   .ready(() => {
 
     angular.bootstrap(document, ['app'], {
