@@ -39,7 +39,9 @@ module.exports = function (config) {
     },
     reporters: [
       'mocha'
-    ]
+    ],
+    autoWatch: false,
+    singleRun: true
   });
 
 };
