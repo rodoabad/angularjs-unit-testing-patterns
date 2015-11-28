@@ -3,7 +3,7 @@ import path from 'path';
 
 export default {
 
-  devtool: 'eval',
+  devtool: 'inline-source-map',
   entry: './src/client/index.js',
   output: {
     path: path.join(__dirname, 'example'),
@@ -16,7 +16,7 @@ export default {
         exclude: /node_modules/,
         loaders: [
           'ng-annotate?single_quotes',
-          'babel'
+          'babel?cacheDirectory'
         ]
       },
       {

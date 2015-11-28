@@ -1,7 +1,9 @@
 module.exports = function (config) {
 
   config.set({
-    basePath: '',
+    browsers: [
+      'PhantomJS'
+    ],
     frameworks: [
       'chai',
       'mocha',
@@ -25,7 +27,7 @@ module.exports = function (config) {
             exclude: /node_modules/,
             loaders: [
               'ng-annotate?single_quotes',
-              'babel'
+              'babel?cacheDirectory'
             ]
           },
           {
@@ -35,18 +37,9 @@ module.exports = function (config) {
         ]
       }
     },
-    exclude: [],
     reporters: [
-      'dots'
-    ],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_ERROR,
-    autoWatch: false,
-    browsers: [
-      'PhantomJS'
-    ],
-    singleRun: true
+      'mocha'
+    ]
   });
 
 };
